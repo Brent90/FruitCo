@@ -1,0 +1,211 @@
+<?php
+
+$servername = "localhost";
+$username = "root";
+$password = "password";
+$dbname = "fruitCo";
+
+// Create connection
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+
+
+
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>FruitCo Delivery</title>
+
+    <!-- Bootstrap core CSS -->
+    
+    
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Cormorant" rel="stylesheet">
+
+
+  
+  </head>
+
+  <body>
+      
+<div class="showcase">
+    <h1>FruitCo Delievery</h1>
+    <button class="button" id="modalBtn">Sign In</button>
+    <button class="button"><a href="#section-a">Who We Are</a></button>
+    <button class="button"><a href="#section-c">Our Services</a></button>
+ </div>
+  
+  
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="closeBtn" id="closeBtn">&times;</span>
+        <header>
+            <h3 class="header-class">Sign In To View Account</h3>
+        </header>
+        
+        
+        <form onsubmit="return validateUser()">
+         <div class="form-group">
+           <label for="username">Enter Username</label>
+            <input type="text" class="form-control" id="username" placeholder="Enter Username">
+        </div>
+         <div class="form-group">
+           <label for="password">Enter Password</label>
+            <input type="password" class="form-control" id="password" placeholder="Enter Password">
+        </div>
+        <button type="submit" class="btn btn-defaul form-button">Login</button>
+        </form>
+        
+        <h3 class="header-class">Need An Account?</h3>
+        
+        <form onsubmit="return createUser()">
+         <div class="form-group">
+           <label for="createUsername">Create Username</label>
+            <input type="text" class="form-control"id="createUsername" placeholder="Must Be Five Letters Or More">
+        </div>
+         <div class="form-group">
+           <label for="email">Enter Email</label>
+            <input type="email" id="createEmail" class="form-control"id="email" placeholder="Enter Valid Email">
+        </div>
+         <div class="form-group">
+           <label for="createPassword">Create Password</label>
+            <input type="password" id="createPassword" class="form-control" id="createPassword" placeholder="Must Contain At Least Five Letters And Two Numbers">
+        </div>
+        <button type="submit" class="btn btn-defaul form-button">Create Account</button>
+
+        </form>
+    </div>
+    
+    
+</div>     
+  
+  
+  
+   
+<section id="section-a" class="page-info">
+    <h2 class="section-header">About Us</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem molestias hic vel fugiat ratione ea ipsam, perferendis sapiente in quas, nisi beatae tenetur adipisci voluptate, saepe maxime quam officia deserunt consequuntur quasi eaque. Cum delectus, vel ipsa similique aspernatur ea accusantium porro voluptate quos totam quas incidunt neque at numquam eveniet ipsam vero, aperiam, fugit illo expedita possimus fuga laudantium itaque reprehenderit. Odio quisquam cumque aspernatur enim eaque assumenda quo, ipsa non earum delectus, placeat suscipit est? Voluptatem quas natus qui dicta nulla, architecto consequuntur fuga provident, quam iusto explicabo corrupti ad voluptate minus nesciunt excepturi ducimus porro officia magni.</p>
+    
+    
+    <div class="container">
+    
+    <div class="row aboutUs">
+        <div class="col-md-4">
+            <img src="images/person3.jpeg">
+            <h2 class="boxHeader">Meet the owener of our Farm</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate quia temporibus ducimus nam tenetur porro vitae incidunt magnam corporis atque?</p>
+         </div>
+        
+        <div class="col-md-4">
+            <img src="images/person2.jpeg">
+            <h2 class="boxHeader">Meet our farm leader</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, alias?</p>
+        </div>
+        
+        <div class="col-md-4">
+            <img src="images/person1.jpeg">
+            <h2 class="boxHeader">Meet your food delivery girl</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est laborum soluta dolore facilis, enim adipisci expedita magnam obcaecati. Ipsam commodi eaque voluptatem, quia, minus sapiente?</p>
+         </div>
+        </div>
+         
+ 
+    </div>
+    
+    
+    
+    
+    
+</section>
+   
+    
+<section id="section-b" class="page-info">
+    <h3 class="section-header">Where Our Produce Comes From</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, architecto dignissimos ratione, repellendus molestiae vel, veniam aut nobis modi nostrum placeat! Aspernatur iste nobis, labore consequatur perferendis ea ullam ab eos sint nam iure consequuntur ut enim, rem dignissimos reprehenderit. Nemo quibusdam earum temporibus est repellendus sequi, praesentium sapiente quasi commodi. Libero veritatis velit quidem nisi deserunt ullam accusantium, ipsam nihil est. Praesentium quibusdam laborum sapiente eum doloremque, nostrum et omnis sunt, molestiae quo nobis, nisi perspiciatis velit veniam excepturi.</p>
+    
+
+   
+    
+    
+    
+</section>
+   
+   
+   
+   
+   
+<section id="section-c" class="page-info">
+    <h3 class="section-header">Our Servies</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta quisquam ea harum dolores nobis quod, neque aliquam, natus velit quia hic libero quas dolore cumque molestias, id minus unde ipsa nisi saepe maiores placeat. Corporis rem cum aliquam, dignissimos quam provident a est nam! Dolor libero, nesciunt ipsum, ipsa eaque asperiores quo deleniti, repellat rem voluptate quis. Expedita exercitationem incidunt eius at rem. Adipisci maxime, molestiae, cum consequatur repellendus harum itaque quasi distinctio eius reprehenderit dolores iste facilis et nesciunt. Praesentium est dignissimos odit fugit quae consequatur sequi delectus aspernatur, tenetur velit inventore autem, soluta aperiam blanditiis architecto itaque excepturi?</p>
+    
+    
+
+
+    
+</section>
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+    
+    
+    
+    <script src="js/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="/js/bootstrap.min.js"></script>
+    
+  </body>
+  
+  
+  
+</html>
